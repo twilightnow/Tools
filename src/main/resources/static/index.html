@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>Spring Boot Demo</title>
+</head>
+    <h1>Spring Boot and JavaScript Demo</h1>
+    <button onclick="getGreeting()">Get Greeting</button>
+    <p id="greeting"></p>
+
+    <script>
+        function getGreeting() {
+            fetch('/greeting')
+                .then(response => response.text())
+                .then(data => document.getElementById('greeting').innerText = data);
+        }
+    </script>
+<body>
+
+    <script>
+        function goToKanaPage() {
+            window.location.href = 'kana.html';
+        }
+    </script>
+    <h1>欢迎来到学习页面</h1>
+    <button onclick="goToKanaPage()">学习日语五十音图</button>
+</body>
+</html>
