@@ -1,0 +1,24 @@
+.hiragana-cell {
+	width: 50px;
+}
+
+.hiragana-grid .col {
+	border: 1px solid #dee2e6;
+	/* Bootstrap 默认的表格边框颜色 */
+	text-align: center;
+	padding: 0.75rem;
+	/* 根据需要调整 */
+	vertical-align: middle;
+	display: table-cell;
+	/* 使其表现得更像表格单元格 */
+}
+
+.hiragana-grid .row {
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.pronunciation {
+	font-size: smaller;
+	/* 或者使用具体的字体大小，例如 0.75em */
+}

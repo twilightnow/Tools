@@ -1,24 +1,202 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
-    <title>日语五十音学习</title>
-</head>
-<body>
-    <h1>日语五十音图</h1>
-    <div id="kana-container"></div>
 
-    <script>
-        fetch('/kana')
-            .then(response => response.json())
-            .then(data => {
-                const container = document.getElementById('kana-container');
-                data.forEach(kana => {
-                    const kanaElement = document.createElement('div');
-                    kanaElement.innerHTML = `<strong>平假名:</strong> ${kana.hiragana} <strong>片假名:</strong> ${kana.katakana} <strong>罗马字:</strong> ${kana.romaji}`;
-                    container.appendChild(kanaElement);
-                });
-            });
-    </script>
+<head>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+		
+    <link rel="stylesheet" href="css/kana.css">
+	
+	<meta charset="UTF-8">
+	<title>日语五十音学习</title>
+</head>
+
+<body>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+		crossorigin="anonymous"></script>
+	<script src="js/kana.js"></script>
+
+<!-->
+    <div class="container">
+        <h2 class="text-center mt-4">日本五十音图</h2>
+        <table class="table table-bordered mt-4">
+            <tbody>
+                <tr>
+                    <td class="text-center align-middle hiragana-cell">あ<br>a</td>
+                    <td class="text-center align-middle hiragana-cell">い<br></td>
+                    <td class="text-center align-middle hiragana-cell">う<br></td>
+                    <td class="text-center align-middle hiragana-cell">え<br></td>
+                    <td class="text-center align-middle hiragana-cell">お<br></td>
+                </tr>
+                <tr>
+                    <td class="text-center align-middle hiragana-cell">か<br></td>
+                    <td class="text-center align-middle hiragana-cell">き<br></td>
+                    <td class="text-center align-middle hiragana-cell">く<br></td>
+                    <td class="text-center align-middle hiragana-cell">け<br></td>
+                    <td class="text-center align-middle hiragana-cell">こ<br></td>
+                </tr>
+                <tr>
+                    <td class="text-center align-middle hiragana-cell">さ<br></td>
+                    <td class="text-center align-middle hiragana-cell">し<br></td>
+                    <td class="text-center align-middle hiragana-cell">す<br></td>
+                    <td class="text-center align-middle hiragana-cell">せ<br></td>
+                    <td class="text-center align-middle hiragana-cell">そ<br></td>
+                </tr>
+                <tr>
+                    <td class="text-center align-middle hiragana-cell">た<br></td>
+                    <td class="text-center align-middle hiragana-cell">ち<br></td>
+                    <td class="text-center align-middle hiragana-cell">つ<br></td>
+                    <td class="text-center align-middle hiragana-cell">て<br></td>
+                    <td class="text-center align-middle hiragana-cell">と<br></td>
+                </tr>
+                <tr>
+                    <td class="text-center align-middle hiragana-cell">な<br></td>
+                    <td class="text-center align-middle hiragana-cell">に<br></td>
+                    <td class="text-center align-middle hiragana-cell">ぬ<br></td>
+                    <td class="text-center align-middle hiragana-cell">ね<br></td>
+                    <td class="text-center align-middle hiragana-cell">の<br></td>
+                </tr>
+                <tr>
+                    <td class="text-center align-middle hiragana-cell">は<br></td>
+                    <td class="text-center align-middle hiragana-cell">ひ<br></td>
+                    <td class="text-center align-middle hiragana-cell">ふ<br></td>
+                    <td class="text-center align-middle hiragana-cell">へ<br></td>
+                    <td class="text-center align-middle hiragana-cell">ほ<br></td>
+                </tr>
+                <tr>
+                    <td class="text-center align-middle hiragana-cell">ま<br></td>
+                    <td class="text-center align-middle hiragana-cell">み<br></td>
+                    <td class="text-center align-middle hiragana-cell">む<br></td>
+                    <td class="text-center align-middle hiragana-cell">め<br></td>
+                    <td class="text-center align-middle hiragana-cell">も<br></td>
+                </tr>
+                <tr>
+                    <td class="text-center align-middle">や<br></td>
+                    <td class="text-center align-middle"></td>
+                    <td class="text-center align-middle">ゆ<<br>/td>
+                    <td class="text-center align-middle"></td>
+                    <td class="text-center align-middle">よ<br></td>
+                </tr>
+                <tr>
+                    <td class="text-center align-middle">わ<br></td>
+                    <td class="text-center align-middle"></td>
+                    <td class="text-center align-middle"></td>
+                    <td class="text-center align-middle"></td>
+                    <td class="text-center align-middle">を<br></td>
+                </tr>
+                <tr>
+                    <td class="text-center align-middle">ん<br></td>
+                    <td class="text-center align-middle"></td>
+                    <td class="text-center align-middle"></td>
+                    <td class="text-center align-middle"></td>
+                    <td class="text-center align-middle"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div-->
+
+    <div class="container">
+        <h2 class="text-center mt-4">日本五十音图概览</h2>
+        <div class="hiragana-grid">
+           <div class="row">
+                <div class="col">あ<br><span class="pronunciation">a</span></div>
+                <div class="col">い<br><span class="pronunciation">i</span></div>
+                <div class="col">う<br><span class="pronunciation">u</span></div>
+                <div class="col">え<br><span class="pronunciation">e</span></div>
+                <div class="col">お<br><span class="pronunciation">o</span></div>
+            </div>
+            <div class="row">
+                <div class="col">か<br><span class="pronunciation">ka</span></div>
+                <div class="col">き<br><span class="pronunciation">ki</span></div>
+                <div class="col">く<br><span class="pronunciation">ku</span></div>
+                <div class="col">け<br><span class="pronunciation">ke</span></div>
+                <div class="col">こ<br><span class="pronunciation">ko</span></div>
+            </div>
+            <div class="row">
+                <div class="col">さ<br><span class="pronunciation">sa</span></div>
+                <div class="col">し<br><span class="pronunciation">shi</span></div>
+                <div class="col">す<br><span class="pronunciation">su</span></div>
+                <div class="col">せ<br><span class="pronunciation">se</span></div>
+                <div class="col">そ<br><span class="pronunciation">so</span></div>
+            </div>
+            <div class="row">
+                <div class="col">た<br><span class="pronunciation">ta</span></div>
+                <div class="col">ち<br><span class="pronunciation">chi</span></div>
+                <div class="col">つ<br><span class="pronunciation">tsu</span></div>
+                <div class="col">て<br><span class="pronunciation">te</span></div>
+                <div class="col">と<br><span class="pronunciation">to</span></div>
+            </div>
+            <div class="row">
+                <div class="col">な<br><span class="pronunciation">na</span></div>
+                <div class="col">に<br><span class="pronunciation">ni</span></div>
+                <div class="col">ぬ<br><span class="pronunciation">nu</span></div>
+                <div class="col">ね<br><span class="pronunciation">ne</span></div>
+                <div class="col">の<br><span class="pronunciation">no</span></div>
+            </div>
+            <div class="row">
+                <div class="col">は<br><span class="pronunciation">ha</span></div>
+                <div class="col">ひ<br><span class="pronunciation">hi</span></div>
+                <div class="col">ふ<br><span class="pronunciation">fu</span></div>
+                <div class="col">へ<br><span class="pronunciation">he</span></div>
+                <div class="col">ほ<br><span class="pronunciation">ho</span></div>
+            </div>
+            <div class="row">
+                <div class="col">ま<br><span class="pronunciation">ma</span></div>
+                <div class="col">み<br><span class="pronunciation">mi</span></div>
+                <div class="col">む<br><span class="pronunciation">mu</span></div>
+                <div class="col">め<br><span class="pronunciation">me</span></div>
+                <div class="col">も<br><span class="pronunciation">mo</span></div>
+            </div>
+            <div class="row">
+                <div class="col">や<br><span class="pronunciation">ya</span></div>
+                <div class="col">ー<br><span class="pronunciation">-</span></div>
+                <div class="col">ゆ<br><span class="pronunciation">yu</span></div>
+                <div class="col">ー<br><span class="pronunciation">-</span></div>
+                <div class="col">よ<br><span class="pronunciation">yo</span></div>
+            </div>
+            <div class="row">
+                <div class="col">ら<br><span class="pronunciation">ra</span></div>
+                <div class="col">り<br><span class="pronunciation">ri</span></div>
+                <div class="col">る<br><span class="pronunciation">ru</span></div>
+                <div class="col">れ<br><span class="pronunciation">re</span></div>
+                <div class="col">ろ<br><span class="pronunciation">ro</span></div>
+            </div>
+            <div class="row">
+                <div class="col">わ<br><span class="pronunciation">wa</span></div>
+                <div class="col">ー<br><span class="pronunciation">-</span></div>
+                <div class="col">ー<br><span class="pronunciation">-</span></div>
+                <div class="col">ー<br><span class="pronunciation">-</span></div>
+                <div class="col">を<br><span class="pronunciation">o(wo)</span></div>
+            </div>
+            <div class="row">
+                <div class="col">ん<br><span class="pronunciation">n</span></div>
+                <div class="col">ー<br><span class="pronunciation">-</span></div>
+                <div class="col">ー<br><span class="pronunciation">-</span></div>
+                <div class="col">ー<br><span class="pronunciation">-</span></div>
+                <div class="col">ー<br><span class="pronunciation">-</span></div>
+            </div>
+        </div>
+        
+<!-- 还需追加内容 平假名片假名 浊音 拗音 外来语追加片假名 参考1https://www.coscom.co.jp/hiragana-katakana/kanatable-j.html -->        
+    <div class="container">
+        <h2 class="text-center mt-4">平假名</h2>
+        <div class="hiragana-grid">
+			<div class="row">
+				<div class="col"></div>
+			</div>
+        </div>
+	</div>
+    <div class="container">
+        <h2 class="text-center mt-4">片假名</h2>
+        <div class="hiragana-grid">
+			<div class="row">
+				<div class="col"></div>
+			</div>
+        </div>
+	</div>
+	
+	
 </body>
+
 </html>
