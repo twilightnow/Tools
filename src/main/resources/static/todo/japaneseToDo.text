@@ -1,0 +1,8 @@
+↓↓↓↓↓ 2024.1.21 ↓↓↓↓↓
+	1 更新本地分支，并创建一个分支命名为feature/japanesePronunciation_sakili(分支命名规范)
+	2 kana.html 补全剩下额页面
+		如：日本五十音图概览 的第一行以外，片假名部分，平假名部分，浊音拗音等
+		适当按自己兴趣调整布局
+	参考内容：
+		https://www.nhk.or.jp/lesson/zh/letters/hiragana.html
+		https://riyutool.com/50yintu-bishun/   （扒假名动图）
