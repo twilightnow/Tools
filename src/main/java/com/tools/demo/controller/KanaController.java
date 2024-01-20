@@ -1,17 +1,17 @@
-package com.tools.japaneselearning.controller;
+package com.tools.demo.controller;
 
 
-public class Kana {
+public class KanaController {
     private String hiragana;
     private String katakana;
     private String romaji;
 
-    public Kana(String hiragana, String katakana, String romaji) {
+    public KanaController(String hiragana, String katakana, String romaji) {
         this.hiragana = hiragana;
         this.katakana = katakana;
         this.romaji = romaji;
     }
-
+    // 暂未用到本文件
     // Getters
     public String getHiragana() {
         return hiragana;

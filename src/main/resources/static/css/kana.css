@@ -1,16 +1,11 @@
-.hiragana-cell {
-	width: 50px;
-}
-
 .hiragana-grid .col {
-	border: 1px solid #dee2e6;
-	/* Bootstrap 默认的表格边框颜色 */
+	border: 1px solid #dee2e6; /* Bootstrap 默认的表格边框颜色 */
 	text-align: center;
-	padding: 0.75rem;
-	/* 根据需要调整 */
+	padding: 0.75rem; /* 根据需要调整 */
 	vertical-align: middle;
-	display: table-cell;
-	/* 使其表现得更像表格单元格 */
+	display: table-cell; /* 使其表现得更像表格单元格 */
+	min-width: 20px; /* 设置最小宽度 */
+	width: 20px;     /* 设置固定宽度 */
 }
 
 .hiragana-grid .row {
@@ -19,6 +14,25 @@
 }
 
 .pronunciation {
-	font-size: smaller;
-	/* 或者使用具体的字体大小，例如 0.75em */
+	font-size: smaller; /* 或者使用具体的字体大小，例如 0.75em */
 }
+
+.pronunciation {
+	 font-size: smaller;
+	margin-right: 5px; /* 在读音和音频之间添加一些间距 */
+}
+
+.hiragana-image {
+	width: 60px; /* 根据需要调整图片的大小 */
+	height: auto;
+}
+
+.hiragana-image-speaker {
+	width: 20px; /* 根据需要调整图片的大小 */
+	height: auto;;
+}
+
+.hiragana-audio {
+	vertical-align: middle; /* 与文字垂直对齐 */
+}
+
