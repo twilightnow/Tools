@@ -32,10 +32,23 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
+		
+    	<!-- Spring Web 依赖，用于 RestTemplate 和 WebClient -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		
+	    <!-- JSON 支持 -->
+	    <dependency>
+	        <groupId>com.fasterxml.jackson.core</groupId>
+	        <artifactId>jackson-databind</artifactId>
+	    </dependency>
+	    
+	    <dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-logging</artifactId>
 		</dependency>
 	</dependencies>
 

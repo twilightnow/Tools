@@ -1,4 +1,4 @@
-package com.tools.demo.controller;
+package com.tools.demo.japanese.controller;
 
 
 public class KanaController {
